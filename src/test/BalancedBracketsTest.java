@@ -10,7 +10,7 @@ public class BalancedBracketsTest {
     //TODO: add tests here
     @Test
     public void emptyTest() {
-        assertEquals(true, true);
+        assertTrue(true);
     }
 
     //Test for only brackets
@@ -76,4 +76,17 @@ public class BalancedBracketsTest {
     public void OnlyLetterWithOtherTypeBracket(){
         assertTrue(BalancedBrackets.hasBalancedBrackets("(parenthesis)"));
     }
+
+    //testing null
+    @Test
+    public void NullReturnsFalse(){
+        assertFalse(BalancedBrackets.hasBalancedBrackets(null));
+    }
+
+    //testing blank string
+    @Test
+    public void BlankStringReturnTrue(){
+        assertTrue(BalancedBrackets.hasBalancedBrackets(""));
+    }
+
 }
